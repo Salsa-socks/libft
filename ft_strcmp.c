@@ -1,25 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bnkosi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/18 10:01:32 by bnkosi            #+#    #+#             */
-/*   Updated: 2019/05/18 14:19:48 by bnkosi           ###   ########.fr       */
+/*   Created: 2019/05/18 14:24:03 by bnkosi            #+#    #+#             */
+/*   Updated: 2019/05/18 14:31:19 by bnkosi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-void	ft_putstr(char const *str)
+int	ft_strcmp(const char *s1, const char *s2)
 {
-	int i;
+	unsigned int i;
 
 	i = 0;
-	while(str[i] != '\0')
-	{
-		ft_putchar(str[i]);
+	while (s1[i] != '\0' && s2[i] != '\0')
 		i++;
-	}
+	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }
+

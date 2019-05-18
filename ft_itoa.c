@@ -1,25 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bnkosi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/18 10:01:32 by bnkosi            #+#    #+#             */
-/*   Updated: 2019/05/18 14:19:48 by bnkosi           ###   ########.fr       */
+/*   Created: 2019/05/18 13:53:00 by bnkosi            #+#    #+#             */
+/*   Updated: 2019/05/18 14:10:49 by bnkosi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-void	ft_putstr(char const *str)
+char	*ft_itoa(int i)
 {
-	int i;
+	char *str;
 
-	i = 0;
-	while(str[i] != '\0')
+	if (!(str = (char *)malloc(size of(char) * 2)))
+		return (NULL);
+
+	if (n == -2147483648)
+		return (ft_strcpy(str, "-2147483648"));
+
+	if (i < 0)
 	{
-		ft_putchar(str[i]);
-		i++;
+		str[0] = '-';
+		str[1] = '\0';
+		str = ft_strjoin(str, ft_itoa(-i));
 	}
-}
+
+	else if (i >= 10)
+		str = ft_strjoin(ft_itoa(i / 10), ft_itoa(i % 10));
+
+	else if (i < 10 && i >= 0)
+	{
+		str[0] = i + '0';
+		str[1] = '\0';
+	}
+	return (str);
+}	

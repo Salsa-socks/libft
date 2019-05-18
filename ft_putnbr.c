@@ -1,25 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bnkosi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/18 10:01:32 by bnkosi            #+#    #+#             */
-/*   Updated: 2019/05/18 14:19:48 by bnkosi           ###   ########.fr       */
+/*   Created: 2019/05/18 14:31:30 by bnkosi            #+#    #+#             */
+/*   Updated: 2019/05/18 14:38:00 by bnkosi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-void	ft_putstr(char const *str)
+void	ft_putnbr(int i)
 {
-	int i;
-
-	i = 0;
-	while(str[i] != '\0')
+	if (i == -2147483648)
+		ft_putstr("-2147483648");
+	else if (i < 0)
 	{
-		ft_putchar(str[i]);
-		i++;
+		ft_putchar('-');
+		ft_putnbr(-i);
 	}
+	else if (i >= 10)
+	{
+		putnbr(i / 10);
+		ft_putchar(i % 10 + '0');
+	}
+	else
+		ft_putchar(i + '0');
 }
