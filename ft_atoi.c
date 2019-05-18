@@ -1,31 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bnkosi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/18 10:09:22 by bnkosi            #+#    #+#             */
-/*   Updated: 2019/05/18 13:07:39 by bnkosi           ###   ########.fr       */
+/*   Created: 2019/05/18 13:12:37 by bnkosi            #+#    #+#             */
+/*   Updated: 2019/05/18 13:24:10 by bnkosi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-char	*ft_strdup(char *src)
+int	ft_atoi(const char *str)
 {
-	char *dst;
-	int i;
+	long res;
+	long neg;
+	unsigned int i;
 
+	res = 0;
+	neg = 0;
 	i = 0;
-	while(src[i] != '\0')
+	/* skip over spaces and new lines, increment up string
+	 */
+	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n' || str[i] == '\r' || str[i] == '\v')
 		i++;
-	i++;
-	dst = (char *)malloc(sizeof(char) * i)
-		while (i >= 0)
-		{
-			dst[i] = src[i];
-			i--;
-		}
-	return(dst);
-}
+	if (str[i] == '-' || str[i] == '+')
+	{
+		neg = -1;
+		i++;
+	}
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		res = res * 10 + str[i] - '0';
+		i++;
+	}
+return ((int)(res * neg));	
+

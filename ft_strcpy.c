@@ -6,11 +6,11 @@
 /*   By: bnkosi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/18 09:48:15 by bnkosi            #+#    #+#             */
-/*   Updated: 2019/05/18 09:50:33 by bnkosi           ###   ########.fr       */
+/*   Updated: 2019/05/18 13:07:22 by bnkosi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <libft.h>
 
 char	ft_strcpy(char *s1, char *s2)
 {
