@@ -6,7 +6,7 @@
 /*   By: bnkosi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/18 14:11:06 by bnkosi            #+#    #+#             */
-/*   Updated: 2019/05/19 10:41:38 by bnkosi           ###   ########.fr       */
+/*   Updated: 2019/05/19 10:47:28 by bnkosi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,6 @@ int		ft_strcmp(const char *s1, const char *s2);
 void	ft_putnbr(int i);
 void	ft_memset(void *b, int c, size_t len);
 void	ft_bzero(void *s, size_t n);
-void	ft_memcpy(void *restrict dst, const void *restrict src, size_t n);
+void	ft_memcpy(void *dst, const void *src, size_t n);
 
 
