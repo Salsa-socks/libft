@@ -6,7 +6,7 @@
 /*   By: bnkosi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/18 14:11:06 by bnkosi            #+#    #+#             */
-/*   Updated: 2019/05/19 11:19:09 by bnkosi           ###   ########.fr       */
+/*   Updated: 2019/05/19 11:30:08 by bnkosi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,8 @@ int		ft_strcmp(const char *s1, const char *s2);
 void	ft_putnbr(int i);
 void	ft_memset(void *b, int c, size_t len);
 void	ft_bzero(void *s, size_t n);
-void	ft_memcpy(void *dst, const void *src, size_t n);
-void	ft_memccpy(void *dst, const void *src, int c, size_t n);
-void	ft_memalloc(size_t size);
+void	*ft_memcpy(void *dst, const void *src, size_t n);
+void	*ft_memccpy(void *dst, const void *src, int c, size_t n);
+void	*ft_memalloc(size_t size);
 
 
