@@ -6,10 +6,10 @@
 /*   By: bnkosi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/19 09:51:00 by bnkosi            #+#    #+#             */
-/*   Updated: 2019/05/19 09:55:14 by bnkosi           ###   ########.fr       */
+/*   Updated: 2019/05/20 14:33:04 by bnkosi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <libft.h>
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {

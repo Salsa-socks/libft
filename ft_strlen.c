@@ -6,11 +6,11 @@
 /*   By: bnkosi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/18 09:39:09 by bnkosi            #+#    #+#             */
-/*   Updated: 2019/05/18 13:07:58 by bnkosi           ###   ########.fr       */
+/*   Updated: 2019/05/20 14:41:35 by bnkosi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 int	ft_strlen(char *str)
 {
