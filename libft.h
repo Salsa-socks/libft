@@ -6,7 +6,7 @@
 /*   By: bnkosi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/18 14:11:06 by bnkosi            #+#    #+#             */
-/*   Updated: 2019/05/21 11:52:03 by bnkosi           ###   ########.fr       */
+/*   Updated: 2019/05/21 12:09:11 by bnkosi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,3 +51,5 @@ char	*ft_strstr(const char *s1, const char *s2);
 char	*ft_strnstr(const char *s1, const char *s2, size_t len);
 int		ft_isdigit(int c);
 int		ft_isalpha(int c);
+int		ft_isascii(int c);
+int		ft_isalnum(int c);
