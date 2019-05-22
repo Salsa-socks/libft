@@ -6,7 +6,7 @@
 /*   By: bnkosi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/18 14:11:06 by bnkosi            #+#    #+#             */
-/*   Updated: 2019/05/21 12:09:11 by bnkosi           ###   ########.fr       */
+/*   Updated: 2019/05/22 08:19:31 by bnkosi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,3 +53,5 @@ int		ft_isdigit(int c);
 int		ft_isalpha(int c);
 int		ft_isascii(int c);
 int		ft_isalnum(int c);
+char	ft_getchar(void);
+void	ft_putendl(char const *s);
