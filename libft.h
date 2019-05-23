@@ -6,7 +6,7 @@
 /*   By: bnkosi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/18 14:11:06 by bnkosi            #+#    #+#             */
-/*   Updated: 2019/05/22 13:04:42 by bnkosi           ###   ########.fr       */
+/*   Updated: 2019/05/23 12:49:30 by bnkosi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,3 +56,11 @@ int		ft_isalnum(int c);
 char	ft_getchar(void);
 void	ft_putendl(char const *s);
 char	*ft_strnew(size_t size);
+void	*ft_memalloc(size_t size);
+void	ft_memdel(void **ap);
+char	*ft_strnew(size_t size);
+void	ft_strdel(char **as);
+void	ft_strclr(char *s);
+void	ft_striter(char *s, void (*f)(char *));
+void	ft_striteri(char *s, void (*f)(unsigned int, char *));
+void	*ft_strmap(char const *s, char (*f)(char));
