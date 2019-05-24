@@ -1,31 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bnkosi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/18 14:31:30 by bnkosi            #+#    #+#             */
-/*   Updated: 2019/05/24 12:49:23 by bnkosi           ###   ########.fr       */
+/*   Created: 2019/05/24 12:08:04 by bnkosi            #+#    #+#             */
+/*   Updated: 2019/05/24 12:40:56 by bnkosi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr(int i)
+char **strsplit(char const *s, char c)
 {
-	if (i == -2147483648)
-		ft_putstr("-2147483648");
-	else if (i < 0)
+	char *str[];
+	int i;
+	unsigned int len;
+
+	len = ft_strlen(s);
+	str = (char *)malloc(sizeof((char)s * len - 1));
+
+	i = 0;
+	while (s[i] != '\0')
 	{
-		ft_putchar('-');
-		ft_putnbr(-i);
-	}
-	else if (i >= 10)
-	{
-		ft_putnbr(i / 10);
-		ft_putchar(i % 10 + '0');
-	}
-	else
-		ft_putchar(i + '0');
-}
+
