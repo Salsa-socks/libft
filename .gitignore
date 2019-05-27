@@ -1,1 +1,6 @@
 *.o
+*.DStore
+*.swo
+*.a
+*.swp
+utils
