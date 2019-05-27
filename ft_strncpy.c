@@ -6,7 +6,7 @@
 /*   By: bnkosi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/19 13:24:40 by bnkosi            #+#    #+#             */
-/*   Updated: 2019/05/20 14:42:24 by bnkosi           ###   ########.fr       */
+/*   Updated: 2019/05/27 13:39:33 by bnkosi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strncpy( char *dst, const char *src, size_t len)
 		dst[i] = src[i];
 		i++;
 	}
-	while (i < n)
+	while (i < lenn)
 	{
 		dst[i] = '\0';
 		i++;

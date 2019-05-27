@@ -6,7 +6,7 @@
 /*   By: bnkosi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/18 13:12:37 by bnkosi            #+#    #+#             */
-/*   Updated: 2019/05/20 14:32:47 by bnkosi           ###   ########.fr       */
+/*   Updated: 2019/05/27 12:04:30 by bnkosi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,6 @@ int	ft_atoi(const char *str)
 	res = 0;
 	neg = 0;
 	i = 0;
-	/* skip over spaces and new lines, increment up string
-	 */
 	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n' || str[i] == '\r' || str[i] == '\v')
 		i++;
 	if (str[i] == '-' || str[i] == '+')
@@ -36,4 +34,4 @@ int	ft_atoi(const char *str)
 		i++;
 	}
 return ((int)(res * neg));	
-
+}

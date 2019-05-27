@@ -6,7 +6,7 @@
 /*   By: bnkosi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 09:54:13 by bnkosi            #+#    #+#             */
-/*   Updated: 2019/05/24 11:58:57 by bnkosi           ###   ########.fr       */
+/*   Updated: 2019/05/27 14:07:38 by bnkosi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ char	*ft_strtrim(char const *s)
 	int i;
 	unsigned int len;
 
-	len = ft_strlen(s)
-	str = (char *)malloc(sizeof(char)s * len - 1);
+	len = ft_strlen(s);
+	str = (char *)malloc(sizeof(char)* s + len - 1);
 	if (s == NULL)
 		return (NULL);
 
@@ -33,6 +33,7 @@ char	*ft_strtrim(char const *s)
 			str[i] = s[i];
 			i++;
 		}
+	}
 		str[i] = '\0';
 		return (str);
 }	

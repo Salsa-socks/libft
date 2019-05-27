@@ -6,13 +6,13 @@
 /*   By: bnkosi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/18 09:24:25 by bnkosi            #+#    #+#             */
-/*   Updated: 2019/05/20 14:36:04 by bnkosi           ###   ########.fr       */
+/*   Updated: 2019/05/27 11:34:46 by bnkosi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
-void	ft_putchar (char c)
+void	ft_putchar(char c)
 {
 	write(1, &c, 1);
 }
-

@@ -6,13 +6,13 @@
 /*   By: bnkosi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 07:37:06 by bnkosi            #+#    #+#             */
-/*   Updated: 2019/05/23 09:01:18 by bnkosi           ###   ########.fr       */
+/*   Updated: 2019/05/27 12:18:54 by bnkosi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_memdel(coid **ap)
+void	ft_memdel(void **ap)
 {
 	free (*ap);
 	*ap  = NULL;

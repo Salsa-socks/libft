@@ -5,86 +5,30 @@
 #                                                     +:+ +:+         +:+      #
 #    By: bnkosi <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2019/05/27 07:39:50 by bnkosi            #+#    #+#              #
-#    Updated: 2019/05/27 07:39:58 by bnkosi           ###   ########.fr        #
+#    Created: 2019/05/27 11:56:07 by bnkosi            #+#    #+#              #
+#    Updated: 2019/05/27 12:02:47 by bnkosi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-FLAG = -Wall -Wextra -Werror
-
 NAME = libft.a
 
-SRC = ft_putchar.c \
-	  ft_bzero.c \
-	  ft_atoi.c \
-	  ft_isalpha.c \
-	  ft_isalnum.c \
-	  ft_isascii.c \
-	  ft_isdigit.c \
-	  ft_isprint.c \
-	  ft_itoa.c \
-	  ft_memalloc.c \
-	  ft_memccpy.c \
-	  ft_memchr.c \
-	  ft_memcmp.c \
-	  ft_memdel.c \
-	  ft_memmove.c \
-	  ft_memset.c \
-	  ft_putchar.c \
-	  ft_putchar_fd.c \
-	  ft_putendl.c \
-	  ft_putendl_fd.c \
-	  ft_putnbr.c \
-	  ft_putnbr_fd.c \
-	  ft_putstr.c \
-	  ft_putstr_fd.c \
-	  ft_strcat.c \
-	  ft_strchr.c \
-	  ft_strclr.c \
-	  ft_strcmp.c \
-	  ft_strequ.c \
-	  ft_striter.c \
-	  ft_striteri.c \
-	  ft_strjoin.c \
-	  ft_strlcat.c \
-	  ft_strlen.c \
-	  ft_strmap.c \
-	  ft_strmapi.c \
-	  ft_strncat.c \
-	  ft_strncmp.c \
-	  ft_strnequ.c \
-	  ft_strncpy.c \
-	  ft_strnew.c \
-	  ft_strnstr.c \
-	  ft_strrchr.c \
-	  ft_strsplit.c \
-	  ft_strstr.c \
-	  ft_strsub.c \
-	  ft_strtrim.c \
-	  ft_tolower.c \
-	  ft_toupper.c \
+SRCS = ft_*.c
 
-OBJ  = $(Src:.c = .0)
+INC = includes
+
+OUTPUT = ft_*.o
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
-	@ar rc $(NAME) $(OBJ)
-	@echo "$(NAME) created"
-	@ranlib $(NAME)
-	@echo "$(NAME) indexed"
-
-%.0 %.c
-	@gcc $(FLAG) -c $< -o $@
+$(NAME):
+		@gcc -Wall -Wall -Werror -Wextra -c $(SRCS) -I $(INC)
+		@ar rc $(NAME) $(OUTPUT)
+		@ranlib $(NAME)
 
 clean:
-	@rm -f $(OBJ)
-	@echo "OBJ deleted"
+	@/bin/rm -f $(OUTPUT)
 
-flcean: clean
-	@rm -f $(NAME)
-	@echo "$(NAME) deleted"
+fclean: clean
+	@/bin/rm -f $(NAME)
 
 re: fclean all
-
-.PHONY: all, clean, fcleam, re

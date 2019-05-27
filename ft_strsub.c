@@ -6,7 +6,7 @@
 /*   By: bnkosi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 08:35:03 by bnkosi            #+#    #+#             */
-/*   Updated: 2019/05/24 08:42:26 by bnkosi           ###   ########.fr       */
+/*   Updated: 2019/05/27 14:05:59 by bnkosi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 	if (str == NULL)
 		return (NULL);
 
-	while (i < len))
+	while (i < len)
 	{
-		str[i] = s(start + i);
+		str[i] = s[start + i];
 		i++;
 	}
 	str[i] = '\0';

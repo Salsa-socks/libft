@@ -6,7 +6,7 @@
 /*   By: bnkosi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 10:10:27 by bnkosi            #+#    #+#             */
-/*   Updated: 2019/05/21 10:17:03 by bnkosi           ###   ########.fr       */
+/*   Updated: 2019/05/27 13:40:06 by bnkosi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t len)
 		y = 0;
 		if (s2[y] != '\0' && s1[x + y] == s2[y])
 			y++;
-		if s2[y] == '\0')
+		if (s2[y] == '\0')
 			return ((char *s)s1 + x);
 		x++;
 	}
