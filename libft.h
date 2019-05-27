@@ -6,7 +6,7 @@
 /*   By: bnkosi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/18 14:11:06 by bnkosi            #+#    #+#             */
-/*   Updated: 2019/05/27 14:08:41 by bnkosi           ###   ########.fr       */
+/*   Updated: 2019/05/27 15:21:03 by bnkosi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ int				ft_atoi(const char *str);
 void			ft_putchar(char c);
 void			ft_putchar_fd(char *c, int fd);
 void			ft_putstr(char const *str);
-int				ft_strlen(char *str);
 char			*ft_itoa(int i);
 char			ft_strcpy(char *s1, char *s2);
 int				ft_strlen(const char *str);

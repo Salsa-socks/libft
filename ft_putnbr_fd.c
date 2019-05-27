@@ -6,7 +6,7 @@
 /*   By: bnkosi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 12:41:13 by bnkosi            #+#    #+#             */
-/*   Updated: 2019/05/27 12:43:44 by bnkosi           ###   ########.fr       */
+/*   Updated: 2019/05/27 17:19:15 by bnkosi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_nbr_fd(int n, int fd)
 		ft_putchar_fd('-', fd);
 		ft_putnbr_fd(-n, fd);
 	}
-	else if (n > 0)
+	else if (n >= 10)
 	{
 		ft_putnbr_fd(n / 10, fd);
 		ft_putchar_fd(n % 10 + '0', fd);
