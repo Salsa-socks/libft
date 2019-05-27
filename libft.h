@@ -6,21 +6,21 @@
 /*   By: bnkosi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/18 14:11:06 by bnkosi            #+#    #+#             */
-/*   Updated: 2019/05/27 07:53:05 by bnkosi           ###   ########.fr       */
+/*   Updated: 2019/05/27 07:55:48 by bnkosi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
-#define LIBFT_H
+# define LIBFT_H
 
-#include <unistd.h>
-#include <string.h>
-#include <stdlib.h>
+# include <unistd.h>
+# include <string.h>
+# include <stdlib.h>
 
 typedef struct	s_list
 {
-	void *cntent;
-	size_t cntent_size;
+	void *content;
+	size_t content_size;
 	struct s_list *next;
 }
 	t_list;
