@@ -6,7 +6,7 @@
 /*   By: bnkosi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/18 14:11:06 by bnkosi            #+#    #+#             */
-/*   Updated: 2019/05/24 14:02:30 by bnkosi           ###   ########.fr       */
+/*   Updated: 2019/05/27 07:53:05 by bnkosi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,4 +71,7 @@ int		ft_strenqu(char const *s1, char const *s2, size_t n);
 char	*ft_strsub(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s);
+int		ft_tolower(int c);
+int		ft_toupper(int c);
 
+#endif
