@@ -6,7 +6,7 @@
 /*   By: bnkosi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 12:08:04 by bnkosi            #+#    #+#             */
-/*   Updated: 2019/05/27 13:49:08 by bnkosi           ###   ########.fr       */
+/*   Updated: 2019/05/28 06:51:49 by bnkosi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ char	**strsplit(char const *s, char c)
 			i++;
 		if (s[i] != '\0')
 			centre++;
-		while (s[i] && (s[i] != '\0')
+		while (s[i] && (s[i] != '\0'))
 				i++;
 	}
-	return (centre);
+	return (*centre);
 }
