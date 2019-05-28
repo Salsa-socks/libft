@@ -6,7 +6,7 @@
 /*   By: bnkosi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 13:24:31 by bnkosi            #+#    #+#             */
-/*   Updated: 2019/05/27 13:25:01 by bnkosi           ###   ########.fr       */
+/*   Updated: 2019/05/28 10:49:05 by bnkosi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,7 @@
 
 int		ft_strnequ(char const *s1, char const *s2, size_t n)
 {
+	if (!s1 || !s2)
+		return (0);
 	return (ft_strncmp(s1, s2, n) ? 0 : 1);
 }

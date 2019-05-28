@@ -1,25 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strtok.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bnkosi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/28 06:57:40 by bnkosi            #+#    #+#             */
-/*   Updated: 2019/05/28 10:51:13 by bnkosi           ###   ########.fr       */
+/*   Created: 2019/05/28 12:22:28 by bnkosi            #+#    #+#             */
+/*   Updated: 2019/05/28 12:29:14 by bnkosi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strncmp(const char *s1, const char *s2, size_t n)
+char	*ft_strtok(char *str, char token)
 {
-	size_t i;
+	static char *stock;
+	char *ptr;
+	int i;
 
 	i = 0;
-	if (n == 0)
-		return (0);
-	while (s1[i] == s2[i] && s1[i] != '\0' && s2[i] != '\0' && i < n - 1)
-		i++;
-	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+	stock = NULL;
+	ptr  = NULL;
+	if (str != NULL)
+		stock = ft_strdup(str);
+	while (*stock != '\0')
+	{
+		if (i == 0 && *stock != token)
+		{
+			i = 1;
+			ptr = stock;
+		}
+		else if (i == 1 && *stock == token)
+		{
+			*stock = '\0';
+			stock += 1;
+			break;
+		}
+		stock++;
+	}
+	return (ptr);
 }

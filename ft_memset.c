@@ -6,12 +6,12 @@
 /*   By: bnkosi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/19 09:31:37 by bnkosi            #+#    #+#             */
-/*   Updated: 2019/05/28 07:37:21 by bnkosi           ###   ########.fr       */
+/*   Updated: 2019/05/28 09:23:38 by bnkosi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-void	ft_memset(void *b, int c, size_t len)
+void	*ft_memset(void *b, int c, size_t len)
 {
 	char	*p;
 
@@ -21,5 +21,5 @@ void	ft_memset(void *b, int c, size_t len)
 		p[len - 1] = c;
 		len--;
 	}
-	return ();
+	return (b);
 }

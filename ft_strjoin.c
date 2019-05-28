@@ -6,7 +6,7 @@
 /*   By: bnkosi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 08:45:09 by bnkosi            #+#    #+#             */
-/*   Updated: 2019/05/28 07:29:12 by bnkosi           ###   ########.fr       */
+/*   Updated: 2019/05/28 09:32:47 by bnkosi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		return (NULL);
 	while (s1[i] != '\0')
 	{
-		str[i] = s1[j]
+		str[i] = s1[j];
 		i++;
 	}
 	

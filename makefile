@@ -6,13 +6,13 @@
 #    By: bnkosi <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/27 11:56:07 by bnkosi            #+#    #+#              #
-#    Updated: 2019/05/28 08:50:24 by bnkosi           ###   ########.fr        #
+#    Updated: 2019/05/28 09:10:51 by bnkosi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-FLAG = -Wall -Wextra -Werror
+FLAG = -Wall -Wextra -Werror -I. -c 
 
 SRC = ft_bzero.c \
 	  ft_isalnum.c \
@@ -66,7 +66,7 @@ SRC = ft_bzero.c \
 	  ft_tolower.c \
 	  ft_toupper.c \
 
-OBJ = $(SRC:.c = o)
+OBJ = $(SRC:%.c=%.o)
 
 all: $(NAME)
 
@@ -75,7 +75,7 @@ $(NAME): $(OBJ)
 	@ranlib $(NAME)
 
 %.o: %.c
-	@gcc $(FLAG) -c %< -o %@
+	@gcc $(FLAG) -c $< -o $@
 
 clean:
 	@rm -f $(OBJ)

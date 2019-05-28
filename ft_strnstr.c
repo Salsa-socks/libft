@@ -6,29 +6,25 @@
 /*   By: bnkosi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 10:10:27 by bnkosi            #+#    #+#             */
-/*   Updated: 2019/05/27 13:40:06 by bnkosi           ###   ########.fr       */
+/*   Updated: 2019/05/28 10:56:01 by bnkosi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *s1, const char *s2, size_t len)
+char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 {
-	unsigned int x;
-	unsigned int y;
-	size_t lenx;
+	size_t i;
+	size_t j;
 
-	x = 0;
-	if (s1[0] == '\0' && s2[0] == '\0')
-	return ((char *)s1);
-	while (s1[x] != '\0' && s1[x + y] == s2[y] &&  x < len)
+	i = 0;
+	while (i < n && s1[i] != '\0')
 	{
-		y = 0;
-		if (s2[y] != '\0' && s1[x + y] == s2[y])
-			y++;
-		if (s2[y] == '\0')
-			return ((char *s)s1 + x);
-		x++;
+		j = 0;
+		while (i + j < n && s1[i + j] == s2[j] && s2[j] != '\0')
+			j++;
+		if (s2[j] != '\0')
+			return ((char *)s1 + i);
 	}
 	return (NULL);
 }
