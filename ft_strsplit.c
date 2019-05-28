@@ -6,55 +6,73 @@
 /*   By: bnkosi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 12:08:04 by bnkosi            #+#    #+#             */
-/*   Updated: 2019/05/28 11:22:00 by bnkosi           ###   ########.fr       */
+/*   Updated: 2019/05/28 13:54:13 by bnkosi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static int	ft_cntwrd(const char *str, char c)
+{
+	int word;
+
+	word = 0;
+	if (*str != '\0')
+	{
+		str++;
+		word++;
+	}
+	while (*str)
+	{
+		while (*str == c)
+		{
+			str++;
+			if (*str != c && *str)
+				word++;
+		}
+		str++;
+	}
+	return (word);
+}
+
+static int ft_len(const char *str, char c)
+{
+	int count;
+
+	count = 0;
+	while (*str != c && *str)
+	{
+		count++;
+		str++;
+	}
+	return (count);
+}
+
 char	**ft_strsplit(char *s, const char c)
 {
-	char **result;
-	size_t count;
-	char *tmp;
-	char *last_comma;
-	char delim[2];
-	size_t idx;
-	char *token;
+	int j;
+	int i;
+	char **spt;
 
-	result = 0;
-	count  = 0;
-	last_comma = 0;
-	delim[0] = c;
-	delim[1] = 0;
-	idx = 0;
-
-	while (*tmp)
+	j = 0;
+	i = 0;
+	if (!s || (!(spt  = (char **)malloc(sizeof(char *) * (ft_cntwrd(s, c) + 1)))))
+		return (NULL);
+	while (*s)
 	{
-		if (a_delim == *tmp)
+		while (*s == c && *s)
+			s++;
+		if (*s != c && *s)
 		{
-			count++;
-			last_comma = tmp;
+			if (!(spt[j] = (char *)malloc(sizeof(char) * (ft_len(s, c) + 1))))
+				return (NULL);
+			while (*s && *s != c)
+				spt[j][i++] = (char)*s++;
+			spt[j][i] = '\0';
+			j++;
+			i = 0;
 		}
-		tmp++;
 	}
-	count += last_comma < (s + ft_strlen(s) - 1);
-	count++;
-
-	result = mallc(sizeof(char *) * count);
-
-	if (result)
-	{
-		token = ft_strtok(s, delim);
-
-		while (token)
-		{
-			assert(idx < count);
-			*(result + idx++) =  ft_strdup(token);
-			token = ft_strtok(o, delim);
-		}
-		assert(idx == count -1);
-		*(result + idx)  = 0;
-	}
-	return (result);
+	spt[j] = NULL;
+	return (spt);
 }
