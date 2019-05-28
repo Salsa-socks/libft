@@ -6,7 +6,7 @@
 /*   By: bnkosi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/18 14:11:06 by bnkosi            #+#    #+#             */
-/*   Updated: 2019/05/28 07:00:31 by bnkosi           ###   ########.fr       */
+/*   Updated: 2019/05/28 07:30:25 by bnkosi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void			ft_putstr(char const *str);
 char			*ft_itoa(int i);
 char			ft_strcpy(char *s1, char *s2);
 int				ft_strlen(const char *str);
-char			*ft_strdup(char *src);
+char			*ft_strdup(const char *src);
 int				ft_strcmp(const char *s1, const char *s2);
 void			ft_putnbr(int i);
 void			ft_putnbr_fd(int n, int fd);

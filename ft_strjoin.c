@@ -6,7 +6,7 @@
 /*   By: bnkosi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 08:45:09 by bnkosi            #+#    #+#             */
-/*   Updated: 2019/05/27 13:30:14 by bnkosi           ###   ########.fr       */
+/*   Updated: 2019/05/28 07:29:12 by bnkosi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	str = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
 	if (str == NULL)
 		return (NULL);
-	while (s1[i] != '\0)
+	while (s1[i] != '\0')
 	{
 		str[i] = s1[j]
 		i++;

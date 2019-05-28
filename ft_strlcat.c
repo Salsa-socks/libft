@@ -6,7 +6,7 @@
 /*   By: bnkosi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 10:06:18 by bnkosi            #+#    #+#             */
-/*   Updated: 2019/05/27 13:31:05 by bnkosi           ###   ########.fr       */
+/*   Updated: 2019/05/28 07:28:18 by bnkosi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ size_t	*ft_strlcat(char *dst, const char *src, size_t dstsize)
 		dst[i + j] = src[j];
 		j++;
 	}
-	if (i != size)
-		dst(i + j) = '\0';
+	if (i != dstsize)
+		dst[i + j] = '\0';
 	return (i + ft_strlen(src));
 }
