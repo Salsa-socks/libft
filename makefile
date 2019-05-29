@@ -6,7 +6,7 @@
 #    By: bnkosi <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/27 11:56:07 by bnkosi            #+#    #+#              #
-#    Updated: 2019/05/28 09:10:51 by bnkosi           ###   ########.fr        #
+#    Updated: 2019/05/29 09:40:49 by bnkosi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -80,7 +80,7 @@ $(NAME): $(OBJ)
 clean:
 	@rm -f $(OBJ)
 
-fclean:
+fclean: clean
 	@rm -f $(NAME)
 
 re: fclean all
