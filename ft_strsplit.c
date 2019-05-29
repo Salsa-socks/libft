@@ -6,13 +6,13 @@
 /*   By: bnkosi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 12:08:04 by bnkosi            #+#    #+#             */
-/*   Updated: 2019/05/28 13:54:13 by bnkosi           ###   ########.fr       */
+/*   Updated: 2019/05/29 08:00:18 by bnkosi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_cntwrd(const char *str, char c)
+static int		ft_cw(const char *str, char c)
 {
 	int word;
 
@@ -35,7 +35,7 @@ static int	ft_cntwrd(const char *str, char c)
 	return (word);
 }
 
-static int ft_len(const char *str, char c)
+static int		ft_len(const char *str, char c)
 {
 	int count;
 
@@ -48,15 +48,15 @@ static int ft_len(const char *str, char c)
 	return (count);
 }
 
-char	**ft_strsplit(char *s, const char c)
+char			**ft_strsplit(char *s, const char c)
 {
-	int j;
-	int i;
-	char **spt;
+	int			j;
+	int			i;
+	char		**spt;
 
 	j = 0;
 	i = 0;
-	if (!s || (!(spt  = (char **)malloc(sizeof(char *) * (ft_cntwrd(s, c) + 1)))))
+	if (!s || (!(spt = (char **)malloc(sizeof(char *) * (ft_cw(s, c) + 1)))))
 		return (NULL);
 	while (*s)
 	{

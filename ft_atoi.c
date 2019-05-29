@@ -6,22 +6,23 @@
 /*   By: bnkosi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/18 13:12:37 by bnkosi            #+#    #+#             */
-/*   Updated: 2019/05/27 12:04:30 by bnkosi           ###   ########.fr       */
+/*   Updated: 2019/05/29 07:51:05 by bnkosi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+int					ft_atoi(const char *str)
 {
-	long res;
-	long neg;
-	unsigned int i;
+	long			res;
+	long			neg;
+	unsigned int	i;
 
 	res = 0;
 	neg = 0;
 	i = 0;
-	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n' || str[i] == '\r' || str[i] == '\v')
+	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n' ||
+			str[i] == '\r' || str[i] == '\v')
 		i++;
 	if (str[i] == '-' || str[i] == '+')
 	{
@@ -33,5 +34,5 @@ int	ft_atoi(const char *str)
 		res = res * 10 + str[i] - '0';
 		i++;
 	}
-return ((int)(res * neg));	
+	return ((int)(res * neg));
 }

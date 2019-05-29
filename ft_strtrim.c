@@ -6,18 +6,18 @@
 /*   By: bnkosi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 09:54:13 by bnkosi            #+#    #+#             */
-/*   Updated: 2019/05/28 06:50:50 by bnkosi           ###   ########.fr       */
+/*   Updated: 2019/05/29 07:49:58 by bnkosi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s)
+char				*ft_strtrim(char const *s)
 {
-	char *str;
-	unsigned int i;
-	unsigned int j;
-	unsigned int k;
+	char			*str;
+	unsigned int	i;
+	unsigned int	j;
+	unsigned int	k;
 
 	i = 0;
 	k = 0;
@@ -38,4 +38,4 @@ char	*ft_strtrim(char const *s)
 	}
 	str[k] = '\0';
 	return (str);
-}	
+}

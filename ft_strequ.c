@@ -6,7 +6,7 @@
 /*   By: bnkosi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 15:19:24 by bnkosi            #+#    #+#             */
-/*   Updated: 2019/05/23 16:54:53 by bnkosi           ###   ########.fr       */
+/*   Updated: 2019/05/29 06:42:50 by bnkosi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_strequ(char const *s1, char const *s2)
 {
-		if (s1 == s2)
-			return (1);
-		else
-			return (0);
+	if (s1 == s2)
+		return (1);
+	else
+		return (0);
 }
