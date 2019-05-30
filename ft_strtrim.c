@@ -6,7 +6,7 @@
 /*   By: bnkosi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 09:54:13 by bnkosi            #+#    #+#             */
-/*   Updated: 2019/05/29 07:49:58 by bnkosi           ###   ########.fr       */
+/*   Updated: 2019/05/30 15:31:04 by bnkosi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,13 @@ char				*ft_strtrim(char const *s)
 
 	i = 0;
 	k = 0;
+	if (!s || s[0] == '\0')
+		return ((char *)s);
 	j = ft_strlen(s) - 1;
 	while (s[i] == ' ' || s[i] == '\n' || s[i] == '\t')
 		i++;
 	if (s[i] == '\0')
-		return (ft_strcpy(ft_memalloc(sizeof(char) * 2), " "));
+		return (ft_strcpy(ft_memalloc(sizeof(char) * 2), ""));
 	while (s[j] == ' ' || s[j] == '\n' || s[j] == '\t')
 		j--;
 	str = (char *)malloc(sizeof(char) * (j - i + 2));
