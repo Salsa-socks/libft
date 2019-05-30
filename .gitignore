@@ -3,4 +3,5 @@
 *.swo
 *.a
 *.swp
+a.out
 utils
