@@ -6,7 +6,7 @@
 /*   By: bnkosi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:35:05 by bnkosi            #+#    #+#             */
-/*   Updated: 2019/05/28 06:54:45 by bnkosi           ###   ########.fr       */
+/*   Updated: 2019/05/30 06:13:23 by bnkosi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strstr(const char *s1, const char *s2)
 {
-	unsigned int i;
-	unsigned int j;
+	size_t i;
+	size_t j;
 
 	i = 0;
 	if (s1[0] == '\0' && s2[0] == '\0')
