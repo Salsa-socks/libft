@@ -6,7 +6,7 @@
 /*   By: bnkosi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/18 10:01:32 by bnkosi            #+#    #+#             */
-/*   Updated: 2019/05/30 16:38:00 by bnkosi           ###   ########.fr       */
+/*   Updated: 2019/05/31 15:06:13 by bnkosi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_putstr(char const *str)
 	int i;
 
 	if (!str)
-		return;
+		return ;
 	i = 0;
 	while (str[i] != '\0')
 	{

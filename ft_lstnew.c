@@ -1,27 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bnkosi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/23 11:02:35 by bnkosi            #+#    #+#             */
-/*   Updated: 2019/05/31 14:59:08 by bnkosi           ###   ########.fr       */
+/*   Created: 2019/05/31 10:26:13 by bnkosi            #+#    #+#             */
+/*   Updated: 2019/05/31 12:47:13 by bnkosi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+t_list	*ft_lstnew(void const *content, size_t content_size)
 {
-	unsigned int i;
+	void const newlink;
+	size_t i;
 
-	if (!f || !s)
-		return ;
-	i = 0;
-	while (s[i] != '\0')
+	content_size = 0;
+	newlink = (void)malloc(sizeof(void *)content * content_size - 1);
+	if (*content == NULL)
 	{
-		f(i, s + i);
+		content == NULL;
+		content_size = 0;
+	}
+	i = 0;
+	while (content[i] != '\0' && i < content_size)
+	{
+		newlink[i] = content[i];
 		i++;
 	}
+	free(*content);
+	free(content_size);
+	return(newlink);
 }
