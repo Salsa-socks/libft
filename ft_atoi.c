@@ -6,7 +6,7 @@
 /*   By: bnkosi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/18 13:12:37 by bnkosi            #+#    #+#             */
-/*   Updated: 2019/05/30 13:42:45 by bnkosi           ###   ########.fr       */
+/*   Updated: 2019/06/04 14:23:26 by bnkosi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,4 +38,13 @@ int					ft_atoi(const char *str)
 		i++;
 	}
 	return ((int)(res * neg));
+}
+int main()
+{
+	char a[10] =  "je1";
+	int value;
+	
+	value = ft_atoi(a);
+	printf("value = %d\n" , value);
+	return 0;
 }

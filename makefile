@@ -6,7 +6,7 @@
 #    By: bnkosi <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/27 11:56:07 by bnkosi            #+#    #+#              #
-#    Updated: 2019/05/30 06:11:06 by bnkosi           ###   ########.fr        #
+#    Updated: 2019/06/05 10:38:35 by bnkosi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,6 +66,7 @@ SRC = ft_bzero.c \
 	  ft_strtrim.c \
 	  ft_tolower.c \
 	  ft_toupper.c \
+	  ft_strrev.c \
 
 OBJ = $(SRC:%.c=%.o)
 
