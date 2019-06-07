@@ -6,16 +6,14 @@
 /*   By: bnkosi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 16:23:33 by bnkosi            #+#    #+#             */
-/*   Updated: 2019/06/05 14:26:30 by bnkosi           ###   ########.fr       */
+/*   Updated: 2019/06/07 08:19:52 by bnkosi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	ft_getchar(void)
+int	ft_getchar(char c)
 {
-	char c;
-
 	read(0, &c, 1);
-	return (c);
+	return (o);
 }

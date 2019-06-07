@@ -1,26 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_getstr.c                                        :+:      :+:    :+:   */
+/*   ft_factorial.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bnkosi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/05 14:20:16 by bnkosi            #+#    #+#             */
-/*   Updated: 2019/06/07 08:18:37 by bnkosi           ###   ########.fr       */
+/*   Created: 2019/06/06 08:03:07 by bnkosi            #+#    #+#             */
+/*   Updated: 2019/06/06 08:22:05 by bnkosi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_getstr(char *str)
+int 	ft_factorial(int n)
 {
-	int		i;
+	int res;
+	int i;
 
-	i = 0;
-	while (str[i] != '\0')
+	i = n;
+	if (n == 0 || n == 1)
+		return (1);
+	if (n == NULL)
+		return (NULL);
+	while ( n != '\0' && n >= i )
 	{
-		ft_getchar(str[i]);
-		i++;
+		res  = n * n - 1;
+		i--;
 	}
-	return (str);
+	return (res)
 }
